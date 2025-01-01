@@ -1,5 +1,5 @@
 {
   "version": 2,
-  "builds": [{ "src": "./BD5.1/index.js", "use": "@vercel/node" }],
-  "rewrites": [{ "source": "/(.*)", "destination": "./BD5.1/index.js" }]
+  "builds": [{ "src": "./BD5/index.js", "use": "@vercel/node" }],
+  "rewrites": [{ "source": "/(.*)", "destination": "./BD5/index.js" }]
 }
