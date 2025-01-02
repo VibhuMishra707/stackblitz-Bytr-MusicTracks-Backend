@@ -193,7 +193,7 @@ async function fetchTracksSortByReleaseYear(order) {
 }
 
 app.get("/tracks/sort/release_year", async (req, res) => {
-  try {
+try {
     let order = req.query.order;
 
     // Validate the `order` query parameter
@@ -548,7 +548,7 @@ async function fetchAllLikedTracks(userId) {
   for (let i=0; i<likeTrackIdRecords.length; ++i) {
     likedTrackIds.push(likeTrackIdRecords[i].trackId);
 /*  ---- Chat GPT 4O ----
-Each element in the array is an instance of your ORM model (likely Sequelize) for the like table. These instances have a property called dataValues where the actual values of the fields reside, along with other metadata like _previousDataValues.
+Each element in the array is an instance of your ORM model (likely Sequelize) for the like table. These instances have a property called `dataValues` where the actual values of the fields reside, along with other metadata like `_previousDataValues`.
 -> When you use likeTrackIdRecords[i].trackId, Sequelize uses a getter to fetch the value from dataValues.
 */
   }
