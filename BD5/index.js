@@ -281,7 +281,7 @@ app.post("/tracks/new", async (req, res) => {
     }
 
     let result = await addNewTrack(trackData);
-    return res.status(200).json(result);
+    return res.status(201).json(result);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -318,7 +318,7 @@ app.post("/tracks/update/:id", async (req, res) => {
       return res.status(404).json({ message: "Track not found!" });
     }
 
-    return res.status(200).json(result);
+    return res.status(201).json(result);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -344,7 +344,7 @@ app.post("/tracks/delete/:id", async (req, res) => {
     if (!result) {
       return res.status(404).json({ message: "Track Not Found!" });
     }
-    return res.status(200).json(result);
+    return res.status(201).json(result);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -370,7 +370,7 @@ app.post("/users/new", async (req, res) => {
         .json({ message: "Invalid user data, please provide all fields." });
     }
     let result = await createNewUser(userData);
-    return res.status(200).json(result);
+    return res.status(201).json(result);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -398,7 +398,7 @@ app.post("/users/update/:id", async (req, res) => {
     if (!result) {
       return res.status(404).json({ message: "User Not Found!" });
     }
-    return res.status(200).json(result);
+    return res.status(201).json(result);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
